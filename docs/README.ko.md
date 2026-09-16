@@ -1,330 +1,232 @@
-
-<img src="./images/1131.png" width = "350" height = "500" alt="Firefly" align=right />
-
 <div align="center">
 
-# Firefly
-> 산뜻하고 아름다운 Astro 정적 블로그 테마 템플릿
->
-> ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen)
-![pnpm >= 11](https://img.shields.io/badge/pnpm-%3E%3D11-blue)
+# Carlos blog
+
+Astro 7 + Svelte 5로 만든 정적 개인 블로그
+
+![Node.js >= 22.23](https://img.shields.io/badge/node.js-%3E%3D22.23-brightgreen)
+![pnpm 11](https://img.shields.io/badge/pnpm-11-blue)
 ![Astro](https://img.shields.io/badge/Astro-7-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-6-blue)
->
-> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
-[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/network/members)
-[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/CuteLeaf/Firefly/issues)
->
-> [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z41NQALY)
->
-> **QQ 커뮤니티: [1087127207](https://qm.qq.com/q/ZGsFa8qX2G)**
->
-> ![GitHub License](https://img.shields.io/github/license/CuteLeaf/Firefly)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/CuteLeaf/Firefly)
-[![Afdian Sponsor](https://img.shields.io/badge/Afdian-Sponsor%20Author-ff69b4.svg)](https://ifdian.net/a/cuteleaf)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+**사이트: [https://394000.xyz](https://394000.xyz)**
+
 </div>
 
-
 ---
-📖 README:
-**[简体中文](../README.md)** | **[繁體中文](README.zh-TW.md)** | **[English](../README.en.md)** | **[日本語](README.ja.md)** | **[한국어](README.ko.md)**
 
-🚀 빠른 안내:
-[**🖥️온라인 데모**](https://firefly.cuteleaf.cn/) /
-[**📝문서**](https://docs-firefly.cuteleaf.cn/) /
-[**🍀내 블로그**](https://blog.cuteleaf.cn)
+## 📦 요구 사항
 
-⚡ 정적 사이트 생성: Astro 기반의 매우 빠른 로딩 속도와 SEO 최적화
+- **Node.js >= 22.23.0** (`package.json` 의 `engines` 참고)
+- **pnpm >= 11**: `preinstall` 훅이 `only-allow pnpm` 으로 강제하므로 npm / yarn 은 설치 단계에서 그대로 실패합니다
 
-🎨 현대적인 디자인: 테마 색상을 사용자 지정할 수 있는 깔끔하고 아름다운 인터페이스
-
-📱 모바일 친화적: 모바일에 최적화된 완벽한 반응형 환경
-
-🔧 높은 구성 자유도: 대부분의 기능을 구성 파일에서 사용자 지정 가능
-
-<table width="100%" align="center">
-  <tr>
-    <td colspan="3" align="center">
-      <img src="./images/1.webp" >
-      <br>배너 모드</td>
-    </td>
-  </tr>
-  <tr>
-    <td align="center"><img src="./images/3.webp" width="300"><br>오버레이 모드</td>
-    <td align="center"><img src="./images/2.webp" width="300"><br>전체 화면 배경화면 모드</td>
-    <td align="center"><img src="./images/4.webp" width="300"><br>단색 모드</td>
-  </tr>
-</table>
-<img alt="Lighthouse" src="./images/Lighthouse.png" />
-
->[!TIP]
->
->Firefly는 Astro 프레임워크와 Fuwari 템플릿을 기반으로 개발된 산뜻하고 아름다운 현대식 개인 블로그 테마 템플릿입니다. 기술 애호가와 콘텐츠 제작자를 위해 설계되었으며, 현대적인 웹 기술 스택과 다양한 기능 모듈, 자유롭게 사용자 지정할 수 있는 인터페이스를 제공하여 전문적이고 보기 좋은 개인 블로그를 손쉽게 만들 수 있습니다.
->
->**Firefly의 컴포넌트 디자인이나 관련 코드를 참고하거나 사용하는 경우, 출처가 Firefly임을 밝혀 주세요.**
->
->Firefly는 원본 fuwari 레이아웃도 유지하고 있어 구성 파일에서 취향에 맞게 자유롭게 전환할 수 있습니다.
->
->**더 많은 레이아웃 구성과 데모는 [Firefly 레이아웃 시스템 상세 안내](https://firefly.cuteleaf.cn/posts/guide/firefly-layout-system/)를 확인해 주세요.**
->
->Firefly는 i18n 다국어 UI를 지원하지만, 중국어 간체를 제외한 언어는 AI로 번역되었습니다. 오류를 발견하면 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)를 보내 개선에 참여해 주세요.
-
-## ✨ 기능
-
-### 핵심 기능
-
-- [x] **Astro + Tailwind CSS** - 현대적인 기술 스택을 기반으로 한 초고속 정적 사이트 생성
-- [x] **부드러운 애니메이션** - Swup 페이지 전환 애니메이션으로 매끄러운 탐색 환경 제공
-- [x] **반응형 디자인** - 데스크톱, 태블릿, 모바일 기기에 완벽하게 대응
-- [x] **다국어 지원** - i18n 국제화 UI로 중국어 간체, 중국어 번체, 영어, 일본어, 러시아어, 한국어 지원
-- [x] **전문 검색** - Pagefind 기반 클라이언트 검색과 게시물 콘텐츠 색인 지원
-
-### 개인화
-- [x] **동적 사이드바** - 단일 및 이중 사이드바 구성 지원
-- [x] **게시물 레이아웃** - 목록(단일 열) 및 그리드(다중 열/메이슨리) 레이아웃 지원
-- [x] **글꼴 관리** - 사용자 지정 글꼴과 다양한 글꼴 선택기 지원
-- [x] **푸터 구성** - HTML 콘텐츠 삽입을 통한 완전한 사용자 지정
-- [x] **라이트/다크 모드** - 라이트, 다크, 시스템 설정 따르기 모드 지원
-- [x] **내비게이션 바 사용자 지정** - 로고, 제목, 링크를 자유롭게 사용자 지정
-- [x] **배경화면 모드 전환** - 배너, 전체 화면, 전체 화면 투명 배경화면 및 단색 배경 지원
-- [x] **테마 색상 사용자 지정** - 360° 색조 조절
-
-
-유용한 기능이나 개선 사항이 있다면 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)를 보내 주세요.
-
-## 🚀 빠른 시작
-
-### 요구 사항
-
-- Node.js ≥ 22
-- pnpm ≥ 11
-
-### 로컬 개발
-
-1. **저장소 복제:**
-   ```bash
-   git clone https://github.com/CuteLeaf/Firefly.git
-   cd Firefly
-   ```
-
-   **먼저 자신의 저장소로 [Fork](https://github.com/CuteLeaf/Firefly/fork)한 다음 복제하는 것을 권장합니다. Fork 전에 Star를 누르는 것도 잊지 마세요!**
-
-   ```bash
-   git clone https://github.com/you-github-name/Firefly.git
-   cd Firefly
-   ```
-3. **의존성 설치:**
-   ```bash
-   # Install pnpm if not installed
-   npm install -g pnpm
-
-   # Install project dependencies
-   pnpm install
-   ```
-
-4. **블로그 구성:**
-   - `src/config/` 디렉터리의 구성 파일을 편집하여 블로그 설정을 사용자 지정합니다.
-
-5. **개발 서버 시작:**
-   ```bash
-   pnpm dev
-   ```
-   블로그는 `http://localhost:4321`에서 이용할 수 있습니다.
-
-### 호스팅 플랫폼에 배포
-- **[공식 가이드](https://docs.astro.build/en/guides/deploy/)를 참고하여 블로그를 Vercel, Netlify, Cloudflare Pages, EdgeOne Pages 등에 배포하세요.**
-- **Vercel**, **Netlify** 등 주요 플랫폼에서는 환경에 맞는 어댑터를 자동으로 선택하여 배포합니다.
-
-   프레임워크 프리셋: `Astro`
-
-   루트 디렉터리: `./`
-
-   출력 디렉터리: `dist`
-
-   빌드 명령: `pnpm run build`
-
-   설치 명령: `pnpm install`
-
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CuteLeaf/Firefly&project-name=Firefly&repository-name=Firefly)
-   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/CuteLeaf/Firefly)
-
-## 📖 구성 안내
-
-> 📚 **상세 구성 문서**: 전체 구성 안내는 [Firefly 문서](https://docs-firefly.cuteleaf.cn/)를 확인하세요.
-
-### 웹사이트 언어 설정
-
-블로그의 기본 언어를 설정하려면 `src/config/siteConfig.ts` 파일을 편집하세요.
-
-```typescript
-// Define site language
-const SITE_LANG = "zh_CN";
-```
-
-**지원하는 언어 코드:**
-- `zh_CN` - 중국어 간체
-- `zh_TW` - 중국어 번체
-- `en` - 영어
-- `ja` - 일본어
-- `ru` - 러시아어
-- `ko` - 한국어
-
-### 구성 파일 구조
-
-```
-src/
-├── config/
-│   ├── index.ts                  # Configuration index file
-│   ├── siteConfig.ts             # Site basic configuration
-│   ├── analyticsConfig.ts        # Analytics configuration
-│   ├── announcementConfig.ts     # Announcement configuration
-│   ├── backgroundWallpaper.ts    # Background wallpaper configuration
-│   ├── commentConfig.ts          # Comment system configuration
-│   ├── coverImageConfig.ts       # Cover image configuration
-│   ├── displaySettingsConfig.ts  # Settings panel configuration
-│   ├── dynamicConfig.ts          # Moments page configuration
-│   ├── effectsConfig.ts          # Animation effects config (sakura, etc.)
-│   ├── expressiveCodeConfig.ts   # Code highlighting configuration
-│   ├── fontConfig.ts             # Font configuration
-│   ├── FooterConfig.html           # Footer configuration
-│   ├── friendsConfig.ts          # Friend links configuration
-│   ├── galleryConfig.ts          # Gallery configuration
-│   ├── licenseConfig.ts          # License configuration
-│   ├── musicConfig.ts            # Music player configuration
-│   ├── navBarConfig.ts           # Navbar configuration
-│   ├── pioConfig.ts              # Mascot configuration
-│   ├── mermaidConfig.ts          # Mermaid diagram configuration
-│   ├── plantumlConfig.ts         # PlantUML diagram configuration
-│   ├── profileConfig.ts          # User profile configuration
-│   ├── sidebarConfig.ts          # Sidebar layout configuration
-│   └── sponsorConfig.ts          # Sponsor configuration
-```
-
-
-## ⚙️ 게시물 Frontmatter
-
-```yaml
----
-title: My First Blog Post
-published: 2023-09-09
-description: This is the first post of my new Astro blog.
-image: ./cover.jpg  # Or use "api" to enable random cover images
-tags: [Foo, Bar]
-category: Front-end
-draft: false
-lang: zh-CN      # Only set when article language differs from site language in `siteConfig.ts`
-pinned: false    # Pin article
-comment: true    # Enable comments
----
-```
-
-## 일상
-
-일상 파일은 `src/content/dynamic/`에 저장되며, 하나의 Markdown 파일이 하나의 일상에 해당합니다. 다음 명령으로 만들 수 있습니다.
+## 🚀 로컬 개발
 
 ```bash
-pnpm new-d The weather is lovely today
+pnpm install     # 의존성 설치
+pnpm dev         # 개발 서버 http://localhost:4321
 ```
 
-`pnpm new-dynamic <content>`는 같은 기능을 하는 전체 명령입니다.
+## 🧞 명령어
+
+모든 명령은 프로젝트 루트에서 실행합니다:
+
+| Command | Action |
+| :--- | :--- |
+| `pnpm dev` / `pnpm start` | 로컬 개발 서버 실행 (`localhost:4321`) |
+| `pnpm build` | 프로덕션 빌드 후 `./dist/` 에 출력 |
+| `pnpm preview` | 빌드 결과를 로컬에서 미리보기 |
+| `pnpm check` | `astro check` 로 타입 및 콘텐츠 컬렉션 검사 |
+| `pnpm type-check` | `tsc --noEmit --isolatedDeclarations` (`src/`, `scripts/` 대상) |
+| `pnpm lint` | Biome 검사 및 자동 수정 (`./src`, `./scripts`) |
+| `pnpm format` | Biome 포맷 (`./src`, `./scripts`) |
+| `pnpm new-post <filename>` | 새 글 생성 |
+| `pnpm new-d <content>` | 새 다이내믹 글 생성 |
+| `pnpm new-dynamic <content>` | 위와 동일 (전체 명령 이름) |
+| `pnpm lqips` | LQIP 데이터를 `src/constants/lqips.json` 에 재생성 |
+| `pnpm github-cards` | GitHub 저장소 카드 데이터 재생성 |
+| `pnpm astro ...` | Astro CLI 직접 호출 (`astro add`, `astro check` 등) |
+
+## 📁 프로젝트 구조
+
+```
+├── src/
+│   ├── assets/          # Astro가 최적화하는 이미지 (빌드 시 webp/avif로 변환)
+│   ├── components/      # 영역별 분리: analytics / comment / common / controls /
+│   │                    #   features / layout / misc / pages / widget
+│   ├── config/          # 모든 설정. index.ts 에서 일괄 export
+│   ├── constants/       # 생성 데이터 (lqips.json, github-card-data.json, 아이콘)
+│   ├── content/         # 콘텐츠 컬렉션: posts / dynamic / projects / spec
+│   ├── i18n/            # UI 다국어 문구
+│   ├── layouts/         # Layout.astro (HTML 셸), MainGridLayout.astro (페이지 그리드)
+│   ├── pages/           # Astro 파일 기반 라우팅
+│   ├── plugins/         # 커스텀 remark / rehype 플러그인
+│   ├── styles/          # 전역 스타일
+│   ├── types/           # src/config 에 대응하는 타입 정의
+│   └── utils/           # 정렬, 날짜, 암호화, 이미지 처리, 목차 생성 등
+├── public/              # 그대로 복사되는 정적 자원
+├── scripts/             # 빌드 시 스크립트 (LQIP, 폰트 서브셋, Pagefind 등)
+└── docs/                # 프로젝트 문서
+```
+
+## ✏️ 글쓰기
+
+### 글 Frontmatter
+
+글은 `src/content/posts/` 에 두며 `.md` 와 `.mdx` 를 지원합니다:
 
 ```yaml
 ---
-published: 2026-07-15 16:15:29
-pinned: true  # Pin article
-location: China # Location
+title: 글 제목
+published: 2026-09-16
+updated: 2026-09-20        # 선택. "마지막 수정" 카드에 사용
+description: 글 요약
+image: ./cover.jpg         # 커버. "api" 로 설정하면 랜덤 커버
+tags: [태그A, 태그B]
+category: 카테고리 이름
+draft: false               # 초안. 빌드에 포함되지 않음
+lang: zh-CN                # 사이트 언어와 다를 때만 지정
+pinned: false              # 상단 고정
+comment: true              # 댓글 허용 여부
+password: ""               # 설정 시 글 암호화
+passwordHint: ""           # 비밀번호 힌트
+series: 시리즈 이름         # 시리즈 글 묶음
+seriesOrder: 1             # 시리즈 내 순서
+author: ""                 # 기본 작성자 덮어쓰기
+sourceLink: ""             # 원문 링크
+licenseName: ""            # 기본 라이선스 이름 덮어쓰기
+licenseUrl: ""
 ---
-
-일상 내용은 Markdown을 지원합니다.
 ```
 
-[Memos](https://www.usememos.com/)를 데이터 소스로 사용할 수도 있습니다. `src/config/dynamicConfig.ts`의 `memos` 옵션을 구성하면 고정 항목 동기화와 이미지 첨부 표시를 지원하면서 Memos의 일상을 실시간으로 가져옵니다. 자세한 내용은 [일상 문서](https://docs-firefly.cuteleaf.cn/en/guide/dynamic.html)를 확인하세요.
+### 다이내믹 글
 
-## 🧩 Markdown 확장 문법
+`src/content/dynamic/` 의 Markdown 파일 하나가 글 하나에 해당합니다. 명령으로 만들 수 있습니다:
 
-Astro가 기본으로 지원하는 [GitHub Flavored Markdown](https://github.github.com/gfm/) 외에도 다음과 같은 Markdown 기능을 제공합니다.
+```bash
+pnpm new-d 오늘 기분이 좋아서 훠궈를 먹으러 갔다
+```
 
-- 알림 블록(Admonitions) - GitHub, Obsidian, VitePress, Docusaurus 테마 구성 지원 ([미리 보기 및 사용법](https://firefly.cuteleaf.cn/posts/markdown-extended/))
-- GitHub 저장소 카드 ([미리 보기 및 사용법](https://firefly.cuteleaf.cn/posts/markdown-extended/))
-- Expressive Code 기반의 향상된 코드 블록 ([미리 보기](http://firefly.cuteleaf.cn/posts/code-examples/) / [문서](https://expressive-code.com/))
+```yaml
+---
+published: 2026-09-16 15:29:00
+pinned: true      # 상단 고정
+location: China   # 위치
+---
 
-## 🧞 명령
+본문은 Markdown 문법을 지원합니다.
+```
 
-모든 명령은 프로젝트 루트 디렉터리에서 실행해야 합니다.
+[Memos](https://www.usememos.com/) 를 데이터 소스로 사용할 수도 있습니다. `src/config/dynamicConfig.ts` 에서 `memos.enable` 을 켜면 실시간으로 가져오며, 고정 글 동기화와 이미지 첨부를 지원합니다.
 
-| Command                    | Action                                              |
-|:---------------------------|:----------------------------------------------------|
-| `pnpm install`             | 의존성 설치                                         |
-| `pnpm dev`                 | `localhost:4321`에서 로컬 개발 서버 시작            |
-| `pnpm build`               | 사이트를 `./dist/`에 빌드                           |
-| `pnpm preview`             | 빌드된 사이트를 로컬에서 미리 보기                  |
-| `pnpm check`               | 코드 오류 검사                                      |
-| `pnpm format`              | Biome으로 코드 서식 정리                            |
-| `pnpm new-post <filename>` | 새 게시물 생성                                      |
-| `pnpm new-d <content>`     | 새 일상 생성                                        |
-| `pnpm new-dynamic <content>` | 새 일상 생성(전체 명령)                           |
-| `pnpm astro ...`           | `astro add`, `astro check` 및 기타 명령 실행         |
-| `pnpm astro --help`        | Astro CLI 도움말 표시                               |
+### 프로젝트
 
-## 🙏 감사의 말
+프로젝트 항목은 `src/content/projects/` 에 두며 `title`, `published`, `description`, `image`, `tags`, `status`, `link[]`(`label` / `icon` / `value`), `order` 필드를 가집니다.
 
-Firefly의 2차 개발 기반이 된 [fuwari](https://github.com/saicaca/fuwari) 템플릿을 개발한 [saicaca](https://github.com/saicaca) 님께 특별히 감사드립니다.
+### About / 친구 링크 페이지
 
-Firefly 관련 이미지 에셋의 저작권은 게임 ["붕괴: 스타레일"](https://sr.mihoyo.com/)의 개발사인 [miHoYo](https://www.mihoyo.com/)에 있습니다.
+`src/content/spec/about.md` 와 `src/content/spec/friends.mdx` 가 각각 About 페이지와 친구 링크 페이지의 본문입니다. `friends.mdx` 는 MDX 파일이므로 원하는 대로 완전히 다시 작성할 수 있습니다.
 
-### 기술 스택
+## 🧩 Markdown 확장
 
-- [Astro](https://astro.build)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Iconify](https://iconify.design)
+Astro 기본 제공 [GitHub Flavored Markdown](https://github.github.com/gfm/) 외에 다음이 활성화되어 있습니다:
 
-### 영감을 받은 프로젝트
+- **Admonitions**: `github` / `obsidian` / `vitepress` / `docusaurus` 테마를 `siteConfig.post.rehypeCallouts` 에서 전환
+- **GitHub 저장소 카드**: `::github{repo="owner/repo"}`
+- **확장 코드 블록**: Expressive Code 기반. 줄 번호, 접기, 언어 배지 지원
+- **다이어그램**: Mermaid, PlantUML
+- **수식**: KaTeX
+- **이미지 그리드**, **Wiki 링크**, **읽기 시간** 등 커스텀 플러그인
 
-- [fuwari](https://github.com/saicaca/fuwari)
-- [hexo-theme-shoka](https://github.com/amehime/hexo-theme-shoka)
-- [astro-koharu](https://github.com/cosZone/astro-koharu)
-- [Mizuki](https://github.com/matsuzaka-yuki/Mizuki)
+## ⚙️ 설정
 
-### 기타 참고 자료
-- 블로거 `霞葉`의 [Bangumi Collection](https://kasuha.com/posts/fuwari-enhance-ep2/) 페이지 컴포넌트
-- Bilibili 크리에이터 `公公的日常`의 Q 버전 [Firefly 마스코트 Spine 모델](https://www.bilibili.com/video/BV1fuVzzdE5y)
+모든 설정은 `src/config/` 에 있으며 `src/config/index.ts` 에서 일괄 export 합니다:
+
+```typescript
+import { siteConfig, profileConfig } from "@/config";
+```
+
+주요 설정 파일:
+
+| 파일 | 역할 |
+| :--- | :--- |
+| `siteConfig.ts` | 사이트 제목, URL, 언어, 테마 색, 페이지 스위치, 페이지네이션, 글 페이지 동작 |
+| `profileConfig.ts` | 아바타, 이름, 소개, 소셜 링크 |
+| `sidebarConfig.ts` | 사이드바 레이아웃과 위젯 순서 |
+| `navBarConfig.ts` | 내비게이션 구조. 하단 `LinkPresets` 로 링크 정의 |
+| `backgroundWallpaper.ts` | 배경 모드, 배너 문구, 물결 효과 등 |
+| `commentConfig.ts` | 댓글 시스템: none / twikoo / waline / giscus / disqus / artalk |
+| `analyticsConfig.ts` | 통계: Google Analytics, Clarity, Umami, 51la |
+| `booknavConfig.ts` | 북마크 내비게이션의 분류와 항목 |
+
+나머지 설정(`announcementConfig`, `coverImageConfig`, `dynamicConfig`, `effectsConfig`, `expressiveCodeConfig`, `fontConfig`, `friendsConfig`, `galleryConfig`, `licenseConfig`, `mermaidConfig`, `musicConfig`, `pioConfig`, `plantumlConfig`, `sponsorConfig`, `displaySettingsConfig`)은 각 파일의 주석을 참고하세요.
+
+### 사이트 언어
+
+`src/config/siteConfig.ts` 상단의 `SITE_LANG` 을 수정합니다:
+
+```typescript
+const SITE_LANG = resolveSiteLang("zh_CN");
+```
+
+지원 값: `zh_CN`, `zh_TW`, `en`, `ja`, `ko`, `ru`.
+
+### 페이지 스위치
+
+`siteConfig.ts` 상단의 `pages` 객체가 각 페이지의 공개 여부를 제어합니다. `false` 로 설정하면 해당 페이지는 404를 반환하고 내비게이션 메뉴 항목도 자동으로 숨겨집니다.
+
+### 환경 변수
+
+| 변수 | 역할 |
+| :--- | :--- |
+| `PUBLIC_DISPLAY_SETTINGS` | 표시 설정 패널 제어. `true/1/on/yes` 또는 `false/0/off/no` 를 받으며 `displaySettingsConfig.ts` 보다 우선합니다 |
+| `CF_WORKERS` | Cloudflare Workers 어댑터 활성화 |
+
+## 🔨 빌드 파이프라인
+
+`pnpm build` 는 다음 순서로 실행됩니다:
+
+1. `scripts/generate-github-card-data.ts` — 글에서 사용된 GitHub 저장소 카드 데이터 수집
+2. `scripts/generate-lqips.ts` — LQIP 플레이스홀더 생성
+3. `scripts/generate-vndb-covers.ts` — VNDB 커버 다운로드 (`siteConfig.vndb.downloadCovers` 가 켜진 경우에만)
+4. `astro build` — 정적 사이트를 `dist/` 에 출력
+5. `scripts/prune-pio-assets.ts` — 사용하지 않는 Live2D / Spine 자원 정리
+6. `scripts/subset-fonts.ts` — 폰트 서브셋 생성
+7. `scripts/minify-inline-scripts.ts` — 인라인 스크립트 압축
+8. `scripts/run-pagefind.ts` — Pagefind 전체 검색 인덱스 생성
+
+`src/constants/lqips.json`, `src/constants/github-card-data.json`, `src/constants/icons-data.json` 은 생성물이지만 저장소에 포함되어 있습니다. 내용을 바꾼 뒤에는 `pnpm lqips` / `pnpm github-cards` 로 재생성하세요.
+
+커밋 전에 확인할 생성물: `dist/`, `src/constants/lqips.json`, `src/constants/github-card-data.json`, `public/vndb-covers/`.
+
+## ☁️ 배포
+
+출력은 완전한 정적 파일(`dist/`)이라 어디든 호스팅할 수 있습니다:
+
+- **Vercel**: `vercel.json` 포함. 프레임워크 프리셋 `Astro`, 빌드 명령 `pnpm build`, 출력 디렉터리 `dist`
+- **Cloudflare Workers**: `wrangler.jsonc` 사용. 환경 변수 `CF_WORKERS` 를 설정해 어댑터 활성화
+- **GitHub Pages**: `.github/workflows/deploy.yml` 이 `master` 브랜치 푸시 시 빌드 후 배포
+
+로컬 미리보기:
+
+```bash
+pnpm build && pnpm preview
+```
 
 ## 📝 라이선스
 
-이 프로젝트는 [MIT 라이선스](https://mit-license.org/)에 따라 배포됩니다. 자세한 내용은 [LICENSE](../LICENSE) 파일을 확인하세요.
+[MIT license](./LICENSE) 를 따릅니다.
 
-원래 [saicaca/fuwari](https://github.com/saicaca/fuwari)에서 fork되었습니다. 기여해 주신 원작자에게 감사드립니다.
+원래 [saicaca/fuwari](https://github.com/saicaca/fuwari) 에서 포크했고, 테마는 [CuteLeaf/Firefly](https://github.com/CuteLeaf/Firefly) 를 기반으로 합니다. 원작자에게 감사드립니다.
 
-**저작권 고지:**
 - Copyright (c) 2024 [saicaca](https://github.com/saicaca) - [fuwari](https://github.com/saicaca/fuwari)
 - Copyright (c) 2025 [CuteLeaf](https://github.com/CuteLeaf) - [Firefly](https://github.com/CuteLeaf/Firefly)
 
-MIT 라이선스에 따라 코드를 자유롭게 사용, 수정 및 배포할 수 있지만 위 저작권 고지는 반드시 유지해야 합니다.
+MIT 라이선스에 따라 자유롭게 사용, 수정, 재배포할 수 있지만 위 저작권 표시는 유지해야 합니다.
 
-## 🍀 기여자
+### 기술 스택
 
-이 프로젝트에 기여해 주신 모든 분께 감사드립니다. 질문이나 제안이 있다면 [Issue](https://github.com/CuteLeaf/Firefly/issues) 또는 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)를 보내 주세요.
+[Astro](https://astro.build) · [Svelte](https://svelte.dev) · [Tailwind CSS](https://tailwindcss.com) · [Iconify](https://iconify.design) · [Expressive Code](https://expressive-code.com/) · [Pagefind](https://pagefind.app/)
 
-><a href="https://github.com/CuteLeaf/Firefly/graphs/contributors">
->  <img src="https://contrib.rocks/image?repo=CuteLeaf/Firefly" />
-></a>
-
-이 프로젝트의 기반을 마련한 원본 프로젝트 [fuwari](https://github.com/saicaca/fuwari)에 기여해 주신 모든 분께도 감사드립니다.
-
-><a href="https://github.com/saicaca/fuwari/graphs/contributors">
->  <img src="https://contrib.rocks/image?repo=saicaca/fuwari" />
-></a>
-
-## ⭐ Star 기록
-
-[![Star History Chart](https://api.star-history.com/svg?repos=CuteLeaf/Firefly&type=Date)](https://star-history.com/#CuteLeaf/Firefly&Date)
-
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+Firefly 관련 이미지 소재의 저작권은 게임 [『붕괴: 스타레일』](https://sr.mihoyo.com/) 개발사 [miHoYo](https://www.mihoyo.com/) 에 있습니다.

@@ -33,12 +33,6 @@ yarn.lock
 .idea
 *.iml
 
-# docs
-Firefly-docs/
-
-# lite 版本
-Firefly-Lite/
-
 cache/
 package/
 .obsidian/
@@ -47,3 +41,4 @@ package/
 .codex*
 .claude
 .mimocode
+.workbuddy

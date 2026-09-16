@@ -1,27 +1,20 @@
-# 关于我 / About Me
+# 关于我
 
-你好！我是 **夏叶** ，一个在数字世界中默默无闻的一片叶子。
+<!-- TODO: 换成你自己的自我介绍 -->
 
-## 🛠️ 关于本站
+你好，我是 **你的名字**。
 
-这个网站使用 **Astro** 框架构建，采用了 [Firefly](https://github.com/CuteLeaf/Firefly) 模板，Firefly 是基于 [Fuwari](https://github.com/saicaca/fuwari) 的二次开发。
+这里可以写一段自我介绍：你在做什么、关注什么方向、想在这个博客里记录些什么。
 
-**Firefly** 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。
+## 关于本站
 
+本站使用 [Astro](https://astro.build) 构建，主题基于 [Firefly](https://github.com/CuteLeaf/Firefly)（[Fuwari](https://github.com/saicaca/fuwari) 的二次开发），部署在静态托管上。
 
-**🖥️在线预览： [Firefly - Demo site](https://firefly.cuteleaf.cn/)**
+- **站点地址**：[https://394000.xyz](https://394000.xyz)
+- **订阅**：[RSS](/rss/) / [Atom](/atom/)
 
-**📝Firefly使用文档： [https://docs-firefly.cuteleaf.cn](https://docs-firefly.cuteleaf.cn/)**
-
-**⭐Firefly开源地址：[https://github.com/CuteLeaf/Firefly](https://github.com/CuteLeaf/Firefly)** 
-
-**⭐Fuwari开源地址：[https://github.com/saicaca/fuwari](https://github.com/saicaca/fuwari)**
-
-::github{repo="CuteLeaf/Firefly"}
-
-::github{repo="saicaca/fuwari"}
+<!-- TODO: 按需补充友链、联系方式、版权说明等内容 -->
 
 ---
 
-*感谢你的来访！希望在这里能找到对你有用的内容！*
-
+感谢你的来访！

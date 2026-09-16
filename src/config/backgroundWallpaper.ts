@@ -104,26 +104,27 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 首页横幅标题下方的链接图标（可选，支持 showName 显示文字）
 			// 图标支持 Iconify 格式：fa7-brands:github、fa7-solid:envelope、mdi:rss 等
 			links: [
-				{
-					name: "GitHub",
-					icon: "fa7-brands:github",
-					url: "https://github.com/CuteLeaf/Firefly",
-					showName: true,
-				},
-				{
-					name: "Email",
-					icon: "fa7-solid:envelope",
-					url: "mailto:xiaye@msn.com",
-				},
-				{
-					name: "Sponsor",
-					icon: "material-symbols:favorite",
-					url: "https://blog.cuteleaf.cn/sponsor/",
-				},
+				// TODO: 填写你的链接后取消注释
+				// {
+				// 	name: "GitHub",
+				// 	icon: "fa7-brands:github",
+				// 	url: "",
+				// 	showName: true,
+				// },
+				// {
+				// 	name: "Email",
+				// 	icon: "fa7-solid:envelope",
+				// 	url: "",
+				// },
 				{
 					name: "RSS",
 					icon: "fa7-solid:rss",
 					url: "/rss/",
+				},
+				{
+					name: "Atom",
+					icon: "fa7-solid:atom",
+					url: "/atom/",
 				},
 			],
 		},
